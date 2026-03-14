@@ -28,7 +28,7 @@ install:
 # Process raw data into .rds
 data:
 	@echo -e "$(CYAN)Processing raw data into .rds format...$(RESET)"
-	@$(R) scripts/process_data.R
+	@$(R) scripts/data_processor.R
 	@echo -e "$(GREEN)Data processing complete.$(RESET)"
 
 # Run the Shiny app
@@ -44,12 +44,12 @@ manifest:
 
 # Clean processed data with confirmation
 clean:
-	@echo -e "$(RED)WARNING: This will remove files in data/processed/$(RESET)"
-	@read -p "Are you sure you want to continue? [y/N] " -n 1 -r; \
+	@echo -e "$(RED)WARNING: This will remove files in data/df_processed.rds(RESET)"
+	@read -p "Are you sure you want to continue? [y/n] " -n 1 -r; \
 	echo ""; \
 	if [[ $$REPLY =~ ^[Yy]$$ ]]; then \
 		echo -e "$(YELLOW)Cleaning processed data...$(RESET)"; \
-		rm -rf data/processed/*; \
+		rm -rf data/df_processed.rds; \
 		echo -e "$(GREEN)Clean complete.$(RESET)"; \
 	else \
 		echo -e "$(CYAN)Clean aborted.$(RESET)"; \
