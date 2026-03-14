@@ -4,7 +4,9 @@
 
 **TempTales** is an interactive dashboard that allows users to explore global and country-level temperature trends over time. Users can select a country, view seasonal and monthly temperature patterns. This tool consolidates climate data from over two centuries into a user-friendly interface for researchers, students, policy makers, and environmentally conscious individuals.
 
-Deployed Dashboard URL
+Deployed Dashboard <https://019cedc6-a865-4373-9ce5-85e0944748dd.share.connect.posit.cloud/>
+
+NOTE: This repository was based on a python-based application. ChatGPT5 was used to help convert individual functions, but the compilation, structure, and functionality was done manually.
 
 ### Usage (Makefile Guide)
 
